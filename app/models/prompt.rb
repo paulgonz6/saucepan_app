@@ -4,5 +4,6 @@ class Prompt < ActiveRecord::Base
 
   # validates :presenter, :presence => true
   validates :question, :presence => true
-  validates :closing_time, :presence => true
+  # validates :closing_time, :presence => true
+
 end

@@ -28,6 +28,8 @@ class PromptsController < ApplicationController
 
     respond_to do |format|
       if @prompt.save
+        @prompt.closing_time = @prompt.created_at + 2.days
+        @prompt.save
         format.html { redirect_to @prompt, notice: 'Prompt was successfully created.' }
         format.json { render :show, status: :created, location: @prompt }
       else

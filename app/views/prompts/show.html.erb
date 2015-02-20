@@ -7,7 +7,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @prompt.user %>
+
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <strong>Closing time:</strong>
-  <%= @prompt.closing_time %>
+  <%= distance_of_time_in_words(Time.now, @prompt.closing_time) %>
 </p>
 
 <%= link_to 'Edit', edit_prompt_path(@prompt) %> |

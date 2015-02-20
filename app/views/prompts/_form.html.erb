@@ -11,23 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :question %><br>
-    <%= f.text_field :question %>
+  <div class="form-group" >
+    <%= f.text_field :question, placeholder: "What do you want to get feedback on?", class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+  <% if @prompt.persisted? %>
+  <div class="form-group" >
+    <%= f.label :event, class: "form-label" %><br>
+    <%= f.text_field :event, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :event %><br>
-    <%= f.text_field :event %>
+  <div class="form-group" >
+    <%= f.label :closing_time, class: "form-label" %><br>
+    <%= f.text_field :closing_time, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :closing_time %><br>
-    <%= f.text_field :closing_time %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <% end %>
+  <div class="form-group">
+    <% if @prompt.persisted? %>
+      <button type="submit" class="btn btn-primary btn-block">Update</button>
+    <% else %>
+      <button type="submit" class="btn btn-primary btn-block">Create Prompt</button>
+    <% end %>
   </div>
 <% end %>
