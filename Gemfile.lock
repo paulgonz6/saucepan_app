@@ -211,7 +211,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-github!
-  omniauth
   omniauth-twitter
   rails (= 4.2.0)
   sass-rails (~> 5.0)

@@ -1,0 +1,16 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header-text {
+  margin-top: 0px;
+}
+
+@-webkit-keyframes fade-in {
+  0% {opacity: 0; transform: translateY(1em);}
+  100% {opacity: 1; transform: translateY(0em);}
+}
+
+.landing-page-action {
+  -webkit-animation: fade-in 2s 1 ease-out;
+}

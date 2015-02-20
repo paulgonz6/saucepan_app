@@ -1,5 +1,5 @@
 class PromptsController < ApplicationController
-  before_action :set_prompt, only: [:show, :edit, :update, :destroy]
+  before_action :set_prompt, only: [:show, :edit, :update, :destroy, :prompt_confirmation]
 
   # GET /prompts
   # GET /prompts.json
@@ -10,6 +10,9 @@ class PromptsController < ApplicationController
   # GET /prompts/1
   # GET /prompts/1.json
   def show
+  end
+
+  def prompt_confirmation
   end
 
   # GET /prompts/new
@@ -30,11 +33,9 @@ class PromptsController < ApplicationController
       if @prompt.save
         @prompt.closing_time = @prompt.created_at + 2.days
         @prompt.save
-        format.html { redirect_to @prompt, notice: 'Prompt was successfully created.' }
-        format.json { render :show, status: :created, location: @prompt }
+        format.html { redirect_to prompt_confirmation_url(@prompt), notice: 'Prompt was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @prompt.errors, status: :unprocessable_entity }
       end
     end
   end
