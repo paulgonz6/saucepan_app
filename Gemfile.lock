@@ -210,7 +210,11 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+<<<<<<< HEAD
   omniauth-github!
+=======
+  omniauth
+>>>>>>> 967b895db048c4ab0541c38ca7c69eb60003e782
   omniauth-twitter
   rails (= 4.2.0)
   sass-rails (~> 5.0)

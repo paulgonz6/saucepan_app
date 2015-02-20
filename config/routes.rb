@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get "auth/twitter/callback" => "sessions#create"
+  get "/signout" => "sessions#destroy", :as => :signout
   resources :prompts
 
   get '/auth/:provider/callback', to: 'sessions#create'
