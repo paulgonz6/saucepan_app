@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
+      user.screen_name = auth["info"]["screen_name"]
+      user.image_url = auth["info"]["screen_name"]
     end
   end
 end
