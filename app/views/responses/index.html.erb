@@ -1,31 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-header">
+        <h3><%= @prompt.question %></h3>
+        <small>Presenter Name: <%= @prompt.presenter.short_name %></small>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= @responses.count %> responses</h3>
+        </div>
+        <ul class="list-group">
+          <% @responses.each do |response| %>
+            <%= render response %>
+          <% end %>
+        </ul>
+      </div>
+      <hr/>
+      <% @response = Response.new %>
+      <%= render 'responses/form', { :@response => @response, :@prompt => @prompt } %>
+    </div>
+  </div>
+</div>
 
-<h1>Listing Responses</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>Prompt</th>
-      <th>Responser</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @responses.each do |response| %>
-      <tr>
-        <td><%= response.content %></td>
-        <td><%= response.prompt_id %></td>
-        <td><%= response.responder_id %></td>
-        <td><%= link_to 'Show', response %></td>
-        <td><%= link_to 'Edit', edit_response_path(response) %></td>
-        <td><%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Response', new_response_path %>

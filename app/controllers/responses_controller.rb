@@ -4,7 +4,8 @@ class ResponsesController < ApplicationController
   # GET /responses
   # GET /responses.json
   def index
-    @responses = Response.all
+    @responses = Response.where(:prompt_id => params[:prompt_id])
+    @prompt = Prompt.find(params[:prompt_id])
   end
 
   # GET /responses/1
@@ -28,7 +29,7 @@ class ResponsesController < ApplicationController
 
     respond_to do |format|
       if @response.save
-        format.html { redirect_to @response, notice: 'Response was successfully created.' }
+        format.html { redirect_to prompt_responses_url(@response.prompt_id), notice: 'Thanks for providing feedback. You can see other responses below or add more feedback at the bottom.' }
         format.json { render :show, status: :created, location: @response }
       else
         format.html { render :new }

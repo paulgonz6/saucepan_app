@@ -3,10 +3,8 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="page-header" style="overflow-hidden">
-        <div class="">
-          <%= image_tag @user.image_url, class: "img-circle" %><br>
-          <%= @user.short_name %>
-        </div>
+        <%= image_tag @user.image_url, class: "img-circle profile-image" %><br>
+        <%= @user.short_name %>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -30,27 +28,29 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <% else %>
+<% else %>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
-            <div class="page-header" style="overflow-hidden">
-              <div class="">
-                <%= image_tag @user.image_url, class: "img-circle" %><br>
-                <%= @user.short_name %> <h5>Wants your feedback on the below:</h5>
-              </div>
-            </div>
-            <% open_prompt = @user.prompts.last %>
-            <%= open_prompt.question %>
-            <% @response = Response.new(:prompt_id => open_prompt.id) %>
-            <hr/>
-            <%= render 'responses/form', { :@response => @response} %>
-          </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="page-header" style="overflow-hidden">
+        <%= image_tag @user.image_url, class: "img-circle profile-image" %><br>
+        <%= @user.short_name %>
       </div>
+      <h5>Wants your feedback on:</h5>
+      <% open_prompt = @user.prompts.last %>
+      <%= open_prompt.question %>
+      <% @response = Response.new(:prompt_id => open_prompt.id) %>
+      <hr/>
+      <%= render 'responses/form', { :@response => @response, :@prompt => open_prompt} %>
+    </div>
+  </div>
+</div>
 
-      <% end %>
+<% end %>
 
 
