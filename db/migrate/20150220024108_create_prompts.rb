@@ -8,6 +8,6 @@ class CreatePrompts < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :prompts, :users
+    add_foreign_key :prompts, :users, :column => "user_id"
   end
 end
