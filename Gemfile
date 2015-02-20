@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Adds Omniauth for twitter login
+gem 'twitter'
+gem 'omniauth-github', :github => 'intridea/omniauth-github'
+gem 'omniauth-twitter'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
