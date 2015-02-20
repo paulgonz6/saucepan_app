@@ -16,7 +16,7 @@
         </ul>
       </div>
       <hr/>
-      <% @response = Response.new %>
+      <% @response = Response.new( :prompt_id => @prompt.id ) %>
       <%= render 'responses/form', { :@response => @response, :@prompt => @prompt } %>
     </div>
   </div>
