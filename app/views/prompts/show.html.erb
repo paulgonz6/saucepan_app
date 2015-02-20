@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @prompt.question %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @prompt.user %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @prompt.event %>
+</p>
+
+<p>
+  <strong>Closing time:</strong>
+  <%= @prompt.closing_time %>
+</p>
+
+<%= link_to 'Edit', edit_prompt_path(@prompt) %> |
+<%= link_to 'Back', prompts_path %>
