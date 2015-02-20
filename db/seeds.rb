@@ -7,3 +7,23 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+Prompt.destroy_all
+10.times do
+  prompt = Prompt.create! ( :question       => Faker::new
+                            :user_id        => 1
+                            :event          =>
+                            :closing_time   =>
+                          )
+  15.times do
+    Response.create! (  :content =>
+                        :prompt_id => prompt.id
+                        )
+  end
+
+end
+
+prompts = Prompt.all
+responses = Response.all
+
+puts "#{prompts.count} prompts have been created"
+puts "#{response.count} responses have been created"

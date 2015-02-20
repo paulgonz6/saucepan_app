@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
 
+  resources :responses
+
   root "static_pages#home"
 
+# USER ROUTES==============================================
   get "/auth/twitter", :as => "signin"
   get '/auth/:provider/callback', to: 'sessions#create'
   get "/signout" => "sessions#destroy", :as => :signout
+
+  get '/:screen_name' => "users#show"
 
   resources :prompts
   get '/prompt_confirmation/:id' => 'prompts#prompt_confirmation', :as => "prompt_confirmation"
 
   get '/landing_page' => "static_pages#home", :as => "landing_page"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

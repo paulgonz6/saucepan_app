@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>SaucepanApp</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.2/paper/bootstrap.css" rel="stylesheet">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -10,13 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <% if current_user %>
-  Welcome <%= current_user.name %>
-  <%= link_to "Sign Out", signout_path %>
-  <% else %>
-  <%= link_to "Sign In With Twitter", signin_path %>
-  <% end %>
+  <%= render 'layouts/nav' %>
   <%= yield %>
 
 </body>

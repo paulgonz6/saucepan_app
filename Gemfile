@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'twitter'
 gem 'omniauth-github', :github => 'intridea/omniauth-github'
 gem 'omniauth-twitter'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

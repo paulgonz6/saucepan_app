@@ -1,0 +1,26 @@
+<nav class="nav">
+<div class="nav-side-menu" style="height:100vh; background-color:black; width:200px; position:
+  absolute; top: 0; left: -1000px; z-index: 1000;">
+  <div class="text-center" style="color:white;">
+    <% if current_user %>
+      <br>
+      <br>
+      <%= image_tag current_user.image_url, class: "img-circle", width: "100px", height: "auto" %>
+      <br>
+      <br>
+      Hi, <%= current_user.short_name %>
+      <hr/>
+      <p>View Previous Prompts</p>
+      <p>Edit Profile</p>
+      <p>Sign Out</p>
+    <% end %>
+  </div>
+  </div>
+  <i class="fa fa-navicon" style="vertical-align: middle"></i>
+  <% if current_user %>
+    <%= link_to "Sign Out", signout_path %>
+  <% else %>
+    <%= link_to "Sign In With Twitter", signin_path %>
+  <% end %>
+</nav>
+

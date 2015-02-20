@@ -28,6 +28,7 @@ class PromptsController < ApplicationController
   # POST /prompts.json
   def create
     @prompt = Prompt.new(prompt_params)
+    @prompt.user_id = current_user.id
 
     respond_to do |format|
       if @prompt.save
@@ -72,6 +73,6 @@ class PromptsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prompt_params
-      params.require(:prompt).permit(:question, :user_id, :event, :closing_time)
+      params.require(:prompt).permit(:question, :event, :closing_time)
     end
 end

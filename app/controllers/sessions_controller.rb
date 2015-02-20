@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to landing_page_url, :notice => "Signed out!"
+    redirect_to root_url, :notice => "Signed out!"
   end
 
   protected

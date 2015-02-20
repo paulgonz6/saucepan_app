@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220194237) do
+ActiveRecord::Schema.define(version: 20150220202649) do
 
   create_table "prompts", force: :cascade do |t|
     t.string   "question"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20150220194237) do
   end
 
   add_index "prompts", ["user_id"], name: "index_prompts_on_user_id"
+
+  create_table "responses", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "prompt_id"
+    t.integer  "responder_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"

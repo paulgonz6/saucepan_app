@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  prompt_id: 1
+  responser_id: 1
+
+two:
+  content: MyText
+  prompt_id: 1
+  responser_id: 1
