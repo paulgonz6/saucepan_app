@@ -6,14 +6,19 @@
         <div style="display: inline-block">
           <%= image_tag @user.image_url, class: "img-circle profile-image" %>
         </div>
-        <div style="display: inline-block; vertical-align: top;">
-          <%= @user.short_name %>
+        <div style="display: inline-block; vertical-align: top; padding-left: 10px;">
+          <h4 class="no-margin"><%= @user.short_name %></h4>
+          <p class="no-margin">Total Prompts: <%= pluralize( @user.prompts.count, 'prompt') %></p>
+          <p class="no-margin">Total Feedback: <%= pluralize(@user.feedback.count, 'response') %></p>
         </div>
+        <br>
+        <br>
+        <%= link_to 'Create new prompt', new_prompt_url %>
       </div>
       <% if @user.prompts.present? %>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><%= @user.prompts.first.question %></h3>
+          <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
         </div>
         <ul class="list-group">
           <% if @user.prompts.last.responses.present? %>
@@ -36,7 +41,7 @@
         </div>
         <ul class="list-group">
           <% @user.prompts.each do |prompt|  %>
-          <% unless prompt == @user.prompts.first %>
+          <% unless prompt == @user.prompts.last %>
           <li class="list-group-item prompt-question">
             <%= prompt.question %>
             <i id="chevron" class="fa fa-chevron-down pull-right"></i>

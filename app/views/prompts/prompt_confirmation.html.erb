@@ -10,17 +10,11 @@
           </h2>
           <h3><%= @prompt.question %></3>
             <hr/>
-            <p>Tell your guests to give feedback at www.saucpan.io/<%= current_user.screen_name %></p>
-            <div class="btn-group" role="group" aria-label="...">
-              <button type="button" class="btn btn-default">
-                <i class="fa fa-twitter"></i>
-              </button>
-              <button type="button" class="btn btn-default">
-                <i class="fa fa-envelope"></i>
-              </button>
-            </div>
+            <p>
+              Tell your guests to give feedback at www.saucepan.io/<%= current_user.screen_name %>
+            </p>
             <hr/>
-            <%= link_to 'To update your prompt or add custom details click here', "#" %>
+            <%= link_to 'Click here to view your feedback', profile_url(current_user.screen_name) %>
           </div>
         </div>
       </div>
