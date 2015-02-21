@@ -1,1 +1,6 @@
-<li class="list-group-item"><%= response.content %></li>
+<li class="list-group-item">
+  <%= response.content %>
+  <small class="data-object">
+    <%= time_ago_in_words(response.created_at) %> ago
+  </small>
+</li>

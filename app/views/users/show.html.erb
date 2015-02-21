@@ -11,26 +11,22 @@
           <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
         </div>
         <ul class="list-group">
-          <% @user.prompts.last.responses.each do |response|%>
-          <li class="list-group-item">
-            <%= response.content %>
-            <small class="data-object">
-              <%= time_ago_in_words(response.created_at) %> ago
-            </small>
-          </li>
-          <% end %>
+          <%= render @user.prompts.last.responses %>
         </ul>
       </div>
-
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Previous Prompts</h3>
         </div>
         <ul class="list-group">
           <% @user.prompts.each do |prompt|  %>
-          <li class="list-group-item">
+          <li class="list-group-item prompt-question">
             <%= prompt.question %>
-            <i class="fa fa-chevron-down pull-right"></i>
+            <i id="chevron" class="fa fa-chevron-down pull-right"></i>
             <div id="prompt-responses-data">
               <hr/>
               <ul class="list-inline">
@@ -52,11 +48,7 @@
                 <% end %>
               </ul>
               <ul class="list-group">
-                <% prompt.responses.each do |response|%>
-                  <li class="list-group-item">
-                    <%= response.content %>
-                  </li>
-                <% end %>
+                <%= render prompt.responses %>
               </ul>
               <% end %>
             </div>
@@ -65,7 +57,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <% else %>
@@ -89,4 +80,18 @@
 
 <% end %>
 
+<script type="text/javascript">
+  var main = function() {
+    $('.prompt-question').click(function() {
+      var $icon = $(this).find('i');
+      if ($icon.hasClass('fa-chevron-down')) {
+        $icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+      } else {
+        $icon.addClass('fa-chevron-down').removeClass('fa-chevron-up');
+      }
+      $(this).children('#prompt-responses-data').toggle();
+    });
+  };
+  $(document).ready(main);
+</script>
 
