@@ -90,12 +90,14 @@
         <%= image_tag @user.image_url, class: "img-circle profile-image" %><br>
         <%= @user.short_name %>
       </div>
-      <h5><small>Wants your feedback on:</small></h5>
-      <% open_prompt = @user.prompts.last %>
-      <h4><%= open_prompt.question %></h4>
-      <% @response = Response.new(:prompt_id => open_prompt.id) %>
-      <hr/>
-      <%= render 'responses/form', { :@response => @response, :@prompt => open_prompt} %>
+      <% if @user.prompts.present? %>
+        <h5><small>Wants your feedback on:</small></h5>
+        <% open_prompt = @user.prompts.last %>
+        <h4><%= open_prompt.question %></h4>
+        <% @response = Response.new(:prompt_id => open_prompt.id) %>
+        <hr/>
+        <%= render 'responses/form', { :@response => @response, :@prompt => open_prompt} %>
+      <% end %>
     </div>
   </div>
 </div>

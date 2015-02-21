@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
-      user.screen_name = auth["info"]["nickname"]
+      user.screen_name = auth["info"]["nickname"].downcase
       user.image_url = auth["info"]["image"]
     end
   end
@@ -15,8 +15,13 @@ class User < ActiveRecord::Base
   def short_name
     name_split = self.name.split
     first_name = name_split[0]
-    last_initial = name_split[1][0]
-    short_name = "#{first_name} #{last_initial}."
+    last_initial = ""
+    if name_split.count > 1
+      last_initial = name_split[1][0]
+      short_name = "#{first_name} #{last_initial}."
+    else
+      short_name = "#{first_name}"
+    end
     return short_name
   end
 
