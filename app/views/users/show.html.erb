@@ -83,13 +83,13 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-      <div class="page-header" style="overflow-hidden">
+      <div class="page-header no-margin">
         <%= image_tag @user.image_url, class: "img-circle profile-image" %><br>
         <%= @user.short_name %>
       </div>
       <h5>Wants your feedback on:</h5>
       <% open_prompt = @user.prompts.last %>
-      <%= open_prompt.question %>
+      <h4><%= open_prompt.question %></h4>
       <% @response = Response.new(:prompt_id => open_prompt.id) %>
       <hr/>
       <%= render 'responses/form', { :@response => @response, :@prompt => open_prompt} %>
