@@ -2,16 +2,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="page-header" style="overflow-hidden">
-        <%= image_tag @user.image_url, class: "img-circle profile-image" %><br>
-        <%= @user.short_name %>
+      <div class="page-header">
+        <div style="display: inline-block">
+          <%= image_tag @user.image_url, class: "img-circle profile-image" %>
+        </div>
+        <div style="display: inline-block; vertical-align: top;">
+          <%= @user.short_name %>
+        </div>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
         </div>
         <ul class="list-group">
-          <%= render @user.prompts.last.responses %>
+          <%= render @user.prompts.last.responses.reverse %>
         </ul>
       </div>
     </div>
@@ -49,7 +53,7 @@
                 <% end %>
               </ul>
               <ul class="list-group">
-                <%= render prompt.responses %>
+                <%= render prompt.responses.reverse %>
               </ul>
               <% end %>
             </div>
