@@ -1,26 +1,36 @@
 <nav class="nav">
-<div class="nav-side-menu" style="height:100vh; background-color:black; width:200px; position:
-  absolute; top: 0; left: -1000px; z-index: 1000;">
-  <div class="text-center" style="color:white;">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="icon-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-side-menu">
+  <div class="menu-close">
+    <i class="fa fa-close pull-right"></i>
+  </div>
+  <div class="text-center">
     <% if current_user %>
       <br>
-      <br>
-      <%= image_tag current_user.image_url, class: "img-circle", width: "100px", height: "auto" %>
+      <%= image_tag current_user.image_url, class: "img-circle profile-image" %>
       <br>
       <br>
       Hi, <%= current_user.short_name %>
+      <br>
+      <br>
       <hr/>
-      <p>View Previous Prompts</p>
-      <p>Edit Profile</p>
-      <p>Sign Out</p>
+      <p><%= link_to "View Previous Prompts", profile_url(current_user.screen_name) %></p>
+      <hr/>
+      <p><%= link_to "Edit Profile", profile_url(current_user.screen_name) %></p>
+      <hr/>
+      <p><%= link_to "Sign Out", signout_url %></p>
+      <hr/>
+    <% else %>
+      <%= link_to "Sign In With Twitter", signin_path %>
     <% end %>
   </div>
-  </div>
-  <i class="fa fa-navicon" style="vertical-align: middle"></i>
-  <% if current_user %>
-    <%= link_to "Sign Out", signout_path %>
-  <% else %>
-    <%= link_to "Sign In With Twitter", signin_path %>
-  <% end %>
-</nav>
+</div>
 

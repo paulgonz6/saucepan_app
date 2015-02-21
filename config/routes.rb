@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/auth/twitter", :as => "signin"
   get '/auth/:provider/callback', to: 'sessions#create'
   get "/signout" => "sessions#destroy", :as => :signout
-  get '/:screen_name' => "users#show"
+  get '/:screen_name' => "users#show", :as => :profile
 
 # RESPONSES ROUTES==============================================
 
