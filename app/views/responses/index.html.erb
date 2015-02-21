@@ -1,18 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="page-header">
+      <div class="page-header no-margin">
         <h3><%= @prompt.question %></h3>
         <small>Feedback for: <%= @prompt.presenter.short_name %></small>
       </div>
+      <br>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><%= pluralize(@responses.count, 'response') %> responses</h3>
+          <h3 class="panel-title"><%= pluralize(@responses.count, 'response') %></h3>
         </div>
         <ul class="list-group">
-          <% @responses.each do |response| %>
-            <%= render response %>
-          <% end %>
+          <%= render @responses.reverse %>
         </ul>
       </div>
       <hr/>

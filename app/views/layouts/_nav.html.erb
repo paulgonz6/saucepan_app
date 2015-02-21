@@ -29,7 +29,8 @@
       <p><%= link_to "Sign Out", signout_url %></p>
       <hr/>
     <% else %>
-      <%= link_to "Sign In With Twitter", signin_path %>
+      <br>
+      <%= link_to '<i class="fa fa-twitter"></i> Login with Twitter'.html_safe, signin_path, :class => "btn btn-default" %>
     <% end %>
   </div>
 </div>
