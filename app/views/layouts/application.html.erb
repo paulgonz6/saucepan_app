@@ -10,23 +10,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-  <script>
-    var main = function() {
-      $('.icon-menu').click(function() {
-        $('.nav-side-menu').animate({
-          left: "0px"
-        }, 200);
-      });
-
-      $('.menu-close').click(function() {
-        $('.nav-side-menu').animate({
-          left: "-200px"
-        }, 200);
-
-      });
-    };
-    $(document).ready(main);
-  </script>
 <body>
   <%= render 'layouts/nav' %>
   <div class="page-content">
