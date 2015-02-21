@@ -10,14 +10,20 @@
           <%= @user.short_name %>
         </div>
       </div>
+      <% if @user.prompts.present? %>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
         </div>
         <ul class="list-group">
+          <% if @user.prompts.last.responses.present? %>
           <%= render @user.prompts.last.responses.reverse %>
+          <% else %>
+          <li class="list-group-item">You currently have no feedback on this prompt. Tell your audience to provide you feedack at www.saucepan.io/<%= @user.screen_name %></li>
+          <% end %>
         </ul>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="row">
@@ -55,9 +61,9 @@
               <ul class="list-group">
                 <%= render prompt.responses.reverse %>
               </ul>
-              <% end %>
             </div>
           </li>
+          <% end %>
           <% end %>
         </ul>
       </div>
@@ -87,17 +93,17 @@
 <% end %>
 
 <script type="text/javascript">
-  var main = function() {
-    $('.prompt-question').click(function() {
-      var $icon = $(this).find('#chevron');
-      if ($icon.hasClass('fa-chevron-down')) {
-        $icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
-      } else {
-        $icon.addClass('fa-chevron-down').removeClass('fa-chevron-up');
-      }
-      $(this).children('#prompt-responses-data').toggle();
-    });
-  };
-  $(document).ready(main);
+var main = function() {
+  $('.prompt-question').click(function() {
+    var $icon = $(this).find('#chevron');
+    if ($icon.hasClass('fa-chevron-down')) {
+      $icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+    } else {
+      $icon.addClass('fa-chevron-down').removeClass('fa-chevron-up');
+    }
+    $(this).children('#prompt-responses-data').toggle();
+  });
+};
+$(document).ready(main);
 </script>
 
