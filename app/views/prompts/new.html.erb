@@ -10,6 +10,11 @@
           <br>
           <hr/>
           <%= render 'form' %>
+          <% if current_user.prompts.present? %>
+          <p>
+            By creating a new prompt, you will close out your previous prompt. You can only have on prompt open at a time.
+          </p>
+          <% end %>
         </div>
       </div>
     </div>
