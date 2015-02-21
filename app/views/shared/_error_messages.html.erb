@@ -1,0 +1,13 @@
+<div id="error_explanation" class="text-left">
+  <p>
+    <%= pluralize(@object.errors.count, "error") %> prohibited this prompt from being saved:
+  </p>
+
+  <ul class="list">
+  <% @object.errors.full_messages.each_with_index do |message, i| %>
+    <li class=""><%= message %></li>
+  <% end %>
+  </ul>
+</div>
+<hr/>
+

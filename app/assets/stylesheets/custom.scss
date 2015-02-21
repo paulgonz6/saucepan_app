@@ -50,3 +50,26 @@ a {
   margin-top: 20px;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
+
+.timed-alert-exit {
+
+}
+
+.alert-exit {
+
+}
+
+.alert {
+  border-radius: 0;
+}
+
+#error_explanation {
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid #D9534E;
+
+  .error-list-group > li {
+
+  }
+}

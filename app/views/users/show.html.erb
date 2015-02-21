@@ -3,6 +3,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="page-header no-margin">
+        <br>
         <div style="display: inline-block">
           <%= image_tag @user.image_url, class: "img-circle profile-image" %>
         </div>
@@ -15,6 +16,7 @@
         <br>
         <%= link_to 'Create new prompt', new_prompt_url %>
       </div>
+      <br>
       <% if @user.prompts.present? %>
       <div class="panel panel-default">
         <div class="panel-heading">

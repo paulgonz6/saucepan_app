@@ -3,6 +3,7 @@
     <div class="content-display">
       <div class="content">
         <div class="col-md-6 col-md-offset-3 text-center">
+          <br>
           <%= image_tag current_user.image_url, class: "img-circle profile-image" %>
           <br>
           <br>
@@ -12,7 +13,7 @@
           <%= render 'form' %>
           <% if current_user.prompts.present? %>
           <p>
-            By creating a new prompt, you will close out your previous prompt. You can only have on prompt open at a time.
+            By creating a new prompt, you will close out all previous prompts. You can only have one prompt open at a time.
           </p>
           <% end %>
         </div>

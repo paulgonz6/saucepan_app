@@ -1,14 +1,6 @@
 <%= form_for(@prompt) do |f| %>
   <% if @prompt.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@prompt.errors.count, "error") %> prohibited this prompt from being saved:</h2>
-
-      <ul>
-      <% @prompt.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <%= render 'shared/error_messages', { :@object => @prompt} %>
   <% end %>
 
   <div class="form-group" >

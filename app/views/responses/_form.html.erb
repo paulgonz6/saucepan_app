@@ -1,14 +1,6 @@
 <%= form_for [@prompt, @response] do |f| %>
-  <% if @response.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@response.errors.count, "error") %> prohibited this response from being saved:</h2>
-
-      <ul>
-      <% @response.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <% if @prompt.errors.any? %>
+    <%= render 'shared/error_messages', { :@object => @response} %>
   <% end %>
 
   <div class="form-group">
