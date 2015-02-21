@@ -36,7 +36,7 @@
         </div>
         <ul class="list-group">
           <% @user.prompts.each do |prompt|  %>
-          <% unless prompt == @user.prompts.last %>
+          <% unless prompt == @user.prompts.first %>
           <li class="list-group-item prompt-question">
             <%= prompt.question %>
             <i id="chevron" class="fa fa-chevron-down pull-right"></i>
