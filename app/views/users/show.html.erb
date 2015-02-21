@@ -1,3 +1,8 @@
+
+
+
+
+
 <% if current_user == @user %>
 <div class="container">
   <div class="row">
@@ -6,6 +11,22 @@
         <%= image_tag @user.image_url, class: "img-circle profile-image" %><br>
         <%= @user.short_name %>
       </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
+        </div>
+      <ul class="list-group">
+      <% @user.prompts.last.responses.each do |response|%>
+        <li class="list-group-item">
+          <%= response.content %>
+          <small class="data-object">
+            <%= time_ago_in_words(response.created_at) %> ago
+          </small>
+        </li>
+      <% end %>
+      </ul>
+      </div>
+
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Previous Prompts</h3>
