@@ -3,21 +3,22 @@
     <div class="content-display">
       <div class="content header-text">
         <div class="col-xs-12">
-          <h2 class="no-margin">
+          <h3 class="no-margin">
             <small>
               Congrats, you are now ready to receive feedback on:
             </small>
-          </h2>
-          <h3><%= @prompt.question %></3>
-            <hr/>
-            <p>
-              Tell your guests to give feedback at www.saucepan.io/<%= current_user.screen_name %>
-            </p>
-            <hr/>
-            <%= link_to 'Click here to view your feedback', profile_url(current_user.screen_name) %>
-          </div>
+          </h3>
+          <h3><%= @prompt.question %></h3>
+          <hr/>
+          <p class="lead">
+            Tell your guests to give feedback at <br>
+            <strong>www.saucepan.io/<%= current_user.screen_name %></strong>
+          </p>
+          <hr/>
+          <%= link_to 'Click here to view your feedback', profile_url(current_user.screen_name), class: "btn btn-default" %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
