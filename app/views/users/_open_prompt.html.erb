@@ -1,0 +1,14 @@
+<div class="panel panel-custom">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
+  </div>
+  <ul class="list-group">
+    <% if @user.prompts.last.responses.present? %>
+    <%= render @user.prompts.last.responses.reverse %>
+    <% else %>
+    <li class="list-group-item">
+      You currently have no feedback on this prompt. Tell your audience to provide you feedack at www.saucepan.io/<%= @user.screen_name %>
+    </li>
+    <% end %>
+  </ul>
+</div>

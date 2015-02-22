@@ -1,0 +1,39 @@
+<div class="panel panel-custom">
+  <div class="panel-heading">
+    <h3 class="panel-title">Previous Prompts</h3>
+  </div>
+  <ul class="list-group">
+    <% @user.prompts.each do |prompt|  %>
+    <% unless prompt == @user.prompts.last %>
+    <li class="list-group-item prompt-question">
+      <%= prompt.question %>
+      <i id="chevron" class="fa fa-chevron-down pull-right"></i>
+      <div id="prompt-responses-data">
+        <hr/>
+        <ul class="list-inline">
+          <li> </li>
+          <li>
+            <i class="fa fa-calendar"></i>
+            <%= prompt.created_at.strftime("%b %e, %Y")  %>
+          </li>
+          <li>
+            <i class="fa fa-reply"></i>
+            <%= pluralize(prompt.responses.count, 'response') %>
+          </li>
+
+          <% if prompt.event.present? %>
+          <li>
+            <i class="fa fa-location-arrow"></i>
+            <%= prompt.event %>
+          </li>
+          <% end %>
+        </ul>
+        <ul class="list-group">
+          <%= render prompt.responses.reverse %>
+        </ul>
+      </div>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>

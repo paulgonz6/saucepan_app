@@ -1,0 +1,14 @@
+<div class="page-header no-margin">
+  <br>
+  <div style="display: inline-block">
+    <%= image_tag @user.image_url, class: "img-circle profile-image" %>
+  </div>
+  <div style="display: inline-block; vertical-align: top; padding-left: 10px;">
+    <h4 class="no-margin"><%= @user.short_name %></h4>
+    <p class="no-margin">Total Prompts: <%= pluralize( @user.prompts.count, 'prompt') %></p>
+    <p class="no-margin">Total Feedback: <%= pluralize(@user.feedback.count, 'response') %></p>
+  </div>
+  <br>
+  <br>
+</div>
+<br>

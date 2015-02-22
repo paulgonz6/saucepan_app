@@ -2,80 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="page-header no-margin">
-        <br>
-        <div style="display: inline-block">
-          <%= image_tag @user.image_url, class: "img-circle profile-image" %>
-        </div>
-        <div style="display: inline-block; vertical-align: top; padding-left: 10px;">
-          <h4 class="no-margin"><%= @user.short_name %></h4>
-          <p class="no-margin">Total Prompts: <%= pluralize( @user.prompts.count, 'prompt') %></p>
-          <p class="no-margin">Total Feedback: <%= pluralize(@user.feedback.count, 'response') %></p>
-        </div>
-        <br>
-        <br>
-        <%= link_to 'Create new prompt', new_prompt_url %>
-      </div>
-      <br>
+      <%= render 'user_details' %>
       <% if @user.prompts.present? %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= @user.prompts.last.question %></h3>
-        </div>
-        <ul class="list-group">
-          <% if @user.prompts.last.responses.present? %>
-            <%= render @user.prompts.last.responses.reverse %>
-          <% else %>
-            <li class="list-group-item">
-              You currently have no feedback on this prompt. Tell your audience to provide you feedack at www.saucepan.io/<%= @user.screen_name %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+        <%= render 'open_prompt' %>
       <% end %>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Previous Prompts</h3>
-        </div>
-        <ul class="list-group">
-          <% @user.prompts.each do |prompt|  %>
-          <% unless prompt == @user.prompts.last %>
-          <li class="list-group-item prompt-question">
-            <%= prompt.question %>
-            <i id="chevron" class="fa fa-chevron-down pull-right"></i>
-            <div id="prompt-responses-data">
-              <hr/>
-              <ul class="list-inline">
-                <li> </li>
-                <li>
-                  <i class="fa fa-calendar"></i>
-                  <%= prompt.created_at.strftime("%b %e, %Y")  %>
-                </li>
-                <li>
-                  <i class="fa fa-reply"></i>
-                  <%= pluralize(prompt.responses.count, 'response') %>
-                </li>
-
-                <% if prompt.event.present? %>
-                <li>
-                  <i class="fa fa-location-arrow"></i>
-                  <%= prompt.event %>
-                </li>
-                <% end %>
-              </ul>
-              <ul class="list-group">
-                <%= render prompt.responses.reverse %>
-              </ul>
-            </div>
-          </li>
-          <% end %>
-          <% end %>
-        </ul>
-      </div>
+      <%= render 'previous_prompts' %>
     </div>
   </div>
 </div>

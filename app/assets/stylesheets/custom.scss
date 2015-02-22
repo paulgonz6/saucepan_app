@@ -1,5 +1,6 @@
 body {
   font-family: 'Lato', sans-serif;
+  color: #303A48;
 }
 
 .no-margin {
@@ -27,14 +28,14 @@ body {
 }
 
 .nav-side-menu {
-  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 10px rgba(0,0,0,.2);
   height: 100vh;
   background-color: #37BA91;
   color: white;
   width: 200px;
   position: absolute;
   top: 0;
-  left: -200px;
+  left: -210px;
   z-index: 1500;
 }
 
@@ -83,4 +84,21 @@ a {
   background-color: #37BA91;
   color: white;
   font-weight: 600;
+}
+
+
+footer .row {
+  padding: 25px 50px;
+  border-top: 1px solid rgba(50, 50, 50, .2);
+  color: #303A48;
+  font-weight: 300;
+  background-color: none;
+  margin-top: 25px;
+}
+
+.panel-custom {
+  .panel-heading {
+    background-color: #37BA91;
+    color: white;
+  }
 }

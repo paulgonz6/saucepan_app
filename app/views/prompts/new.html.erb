@@ -1,24 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="content-display">
-      <div class="content">
-        <div class="col-md-6 col-md-offset-3 text-center">
-          <br>
-          <%= image_tag current_user.image_url, class: "img-circle profile-image" %>
-          <br>
-          <br>
-          <%= current_user.short_name %>
-          <br>
-          <hr/>
-          <%= render 'form' %>
-          <% if current_user.prompts.present? %>
-          <p>
-            By creating a new prompt, you will close out all previous prompts. You can only have one prompt open at a time.
-          </p>
-          <% end %>
-        </div>
-      </div>
+    <div class="col-xs-12">
+      <%= render 'users/user_details', { :@user => current_user } %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h4>Create a new prompt now</h4>
+      <%= render 'form' %>
+      <% if current_user.prompts.present? %>
+      <p>
+        By creating a new prompt, you will close out all previous prompts. You can only have one prompt open at a time.
+      </p>
+      <% end %>
     </div>
   </div>
 </div>
+
 

@@ -1,9 +1,12 @@
 <nav class="nav">
   <div class="row">
     <div class="col-xs-12">
-      <div class="icon-menu">
+      <div class="icon-menu pull-left" style="vertical-align: middle;">
         <i class="fa fa-bars"></i>
       </div>
+      <% if current_user.present? %>
+        <%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_prompt_url, class: 'btn btn-custom pull-right' %>
+      <% end %>
     </div>
   </div>
 </nav>
@@ -20,9 +23,8 @@
       <br>
       Hi, <%= current_user.short_name %>
       <br>
-      <br>
       <hr/>
-      <p><%= link_to "View Previous Prompts", profile_url(current_user.screen_name) %></p>
+      <p><%= link_to "My Prompts", profile_url(current_user.screen_name) %></p>
       <hr/>
       <p><%= link_to "Create New Prompt", root_url %></p>
       <hr/>
@@ -45,7 +47,7 @@
 
     $('.menu-close').click(function() {
       $('.nav-side-menu').animate({
-        left: "-200px"
+        left: "-210px"
       }, 200);
 
     });

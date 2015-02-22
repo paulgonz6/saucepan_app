@@ -7,15 +7,10 @@
       </h3>
       <hr/>
       <%= link_to '<i class="fa fa-twitter"></i> Get started for free'.html_safe, signin_path, :class => "btn btn-default" %>
-      <br>
-      <br>
-      <p class="header-subtext lead">
-        Our basic package allows you to start getting feedback for free right away. See below for more information on pricing.
-      </p>
     </div>
   </div>
 </div>
-
+<br>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2 landing-page-section">
@@ -44,9 +39,26 @@
       </div>
     </div>
   </div>
+</div>
 
+<div class="row alt-section">
+  <div class="col-xs-12 col-md-8 col-md-offset-2 landing-page-section">
+    <div class="text-center">
+      <br>
+      <br>
+      <h3 class="no-margin">Why wait to become a better you?</h3>
+      <br>
+      <%= link_to '<i class="fa fa-twitter"></i> Get started now for free'.html_safe, signin_path, :class => "btn btn-custom" %>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div class="container">
   <div class="row">
-    <div class="landing-page-section col-md-8 col-md-offset-2 alt-section text-center col-xs-12">
+    <div class="landing-page-section col-md-8 col-md-offset-2 text-center col-xs-12">
       <div>
         <h4><small>But there is a lot I can't do with Saucepan...</small></h4>
         <h4>We know, and we like it that way</h4>
@@ -62,16 +74,17 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="row">
-    <div class="landing-page-section col-md-8 col-md-offset-2 text-center col-xs-12">
-      <div>
-        <h4>What does this cost me?</h4>
-        <h4><small>Nothing to start</small></h4>
-        <hr/>
-        <%= render 'static_pages/pricing_picker' %>
-      </div>
+<div class="row alt-section">
+  <div class="landing-page-section col-md-8 col-md-offset-2 alt-section text-center col-xs-12">
+    <div>
+      <h4><small>What does this cost me?</small></h4>
+      <h4>It's free to start</h4>
+      <hr/>
+      <%= render 'static_pages/pricing_picker' %>
     </div>
   </div>
 </div>
+
 
