@@ -1,0 +1,429 @@
+/* line 1, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #303A48;
+}
+
+/* line 6, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 10, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.profile-image {
+  height: 75px;
+  width: auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 16, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.data-object {
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  padding: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 0.7em;
+}
+
+/* line 24, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.nav {
+  padding: 5px 10px;
+  font-size: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* line 30, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.nav-side-menu {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  background-color: #37BA91;
+  color: white;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: -210px;
+  z-index: 1500;
+}
+
+/* line 42, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+a {
+  color: inherit;
+}
+
+/* line 46, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.menu-close {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* line 51, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.link-display {
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  padding: 5px 7px;
+  margin-top: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 67, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.alert {
+  border-radius: 0;
+}
+
+/* line 71, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.btn-custom,
+.btn-custom:hover {
+  background-color: #37BA91 !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+/* line 78, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+footer .row {
+  padding: 25px 50px;
+  border-top: 1px solid rgba(50, 50, 50, 0.2);
+  color: #303A48;
+  font-weight: 300;
+  background-color: none;
+  margin-top: 25px;
+}
+
+/* line 88, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+.panel-custom .panel-heading {
+  background-color: #37BA91 !important;
+  color: white !important;
+}
+
+/* line 94, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/custom.scss */
+#error_explanation {
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid #D9534E;
+}
+/* COMMON PRICING STYLES */
+/* line 3, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price,
+.panel.price > .panel-heading {
+  border-radius: 0px;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+
+/* line 10, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* line 13, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price:hover > .panel-heading {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* line 18, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price > .panel-heading {
+  box-shadow: 0px 5px 0px rgba(50, 50, 50, 0.2) inset;
+  text-shadow: 0px 3px 0px rgba(50, 50, 50, 0.6);
+}
+
+/* line 23, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price .list-group-item {
+  border-bottom-: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+/* line 27, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* line 31, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+/* line 36, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price .panel-footer {
+  color: #fff;
+  border-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* line 44, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.price .btn {
+  box-shadow: 0 -1px 0px rgba(50, 50, 50, 0.2) inset;
+  border: 0px;
+}
+
+/* green panel */
+/* line 52, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-green > .panel-heading {
+  color: #fff;
+  background-color: #57AC57;
+  border-color: #71DF71;
+  border-bottom: 1px solid #71DF71;
+}
+
+/* line 60, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-green > .panel-body {
+  color: #fff;
+  background-color: #65C965;
+}
+
+/* line 66, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-green > .panel-body .lead {
+  text-shadow: 0px 3px 0px rgba(50, 50, 50, 0.3);
+}
+
+/* line 70, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-green .list-group-item {
+  color: #333;
+  background-color: rgba(50, 50, 50, 0.01);
+  font-weight: 600;
+  text-shadow: 0px 1px 0px rgba(250, 250, 250, 0.75);
+}
+
+/* blue panel */
+/* line 80, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-blue > .panel-heading {
+  color: #fff;
+  background-color: #608BB4;
+  border-color: #78AEE1;
+  border-bottom: 1px solid #78AEE1;
+}
+
+/* line 88, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-blue > .panel-body {
+  color: #fff;
+  background-color: #73A3D4;
+}
+
+/* line 94, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-blue > .panel-body .lead {
+  text-shadow: 0px 3px 0px rgba(50, 50, 50, 0.3);
+}
+
+/* line 98, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-blue .list-group-item {
+  color: #333;
+  background-color: rgba(50, 50, 50, 0.01);
+  font-weight: 600;
+  text-shadow: 0px 1px 0px rgba(250, 250, 250, 0.75);
+}
+
+/* red price */
+/* line 108, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-red > .panel-heading {
+  color: #fff;
+  background-color: #D04E50;
+  border-color: #FF6062;
+  border-bottom: 1px solid #FF6062;
+}
+
+/* line 116, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-red > .panel-body {
+  color: #fff;
+  background-color: #EF5A5C;
+}
+
+/* line 124, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-red > .panel-body .lead {
+  text-shadow: 0px 3px 0px rgba(50, 50, 50, 0.3);
+}
+
+/* line 128, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-red .list-group-item {
+  color: #333;
+  background-color: rgba(50, 50, 50, 0.01);
+  font-weight: 600;
+  text-shadow: 0px 1px 0px rgba(250, 250, 250, 0.75);
+}
+
+/* grey price */
+/* line 138, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-grey > .panel-heading {
+  color: #fff;
+  background-color: #6D6D6D;
+  border-color: #B7B7B7;
+  border-bottom: 1px solid #B7B7B7;
+}
+
+/* line 146, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-grey > .panel-body {
+  color: #fff;
+  background-color: #808080;
+}
+
+/* line 153, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-grey > .panel-body .lead {
+  text-shadow: 0px 3px 0px rgba(50, 50, 50, 0.3);
+}
+
+/* line 157, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-grey .list-group-item {
+  color: #333;
+  background-color: rgba(50, 50, 50, 0.01);
+  font-weight: 600;
+  text-shadow: 0px 1px 0px rgba(250, 250, 250, 0.75);
+}
+
+/* white price */
+/* line 167, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-white > .panel-heading {
+  color: #333;
+  background-color: #f9f9f9;
+  border-color: #ccc;
+  border-bottom: 1px solid #ccc;
+  text-shadow: 0px 2px 0px rgba(250, 250, 250, 0.7);
+}
+
+/* line 175, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.panel.panel-white.price:hover > .panel-heading {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* line 179, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-white > .panel-body {
+  color: #fff;
+  background-color: #dfdfdf;
+}
+
+/* line 184, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-white > .panel-body .lead {
+  text-shadow: 0px 2px 0px rgba(250, 250, 250, 0.8);
+  color: #666;
+}
+
+/* line 189, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price:hover.panel-white > .panel-body .lead {
+  text-shadow: 0px 2px 0px rgba(250, 250, 250, 0.9);
+  color: #333;
+}
+
+/* line 194, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/pricing_table.scss */
+.price.panel-white .list-group-item {
+  color: #333;
+  background-color: rgba(50, 50, 50, 0.01);
+  font-weight: 600;
+  text-shadow: 0px 1px 0px rgba(250, 250, 250, 0.75);
+}
+/* line 5, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/prompts.scss */
+.content-display {
+  display: table;
+  width: 100%;
+  height: 50vh;
+}
+
+/* line 11, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/prompts.scss */
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 17, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/prompts.scss */
+#prompt-responses-data {
+  display: none;
+}
+/* line 5, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.header-text {
+  color: #37BA91;
+  font-weight: 600;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  line-height: 48px;
+}
+
+/* line 12, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.header-subtext {
+  color: white;
+  size: 22px;
+}
+
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+/* line 27, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.landing-page-action {
+  -webkit-animation: fade-in-up 2s 1 ease-out;
+  animation: fade-in 2s 1 ease-out;
+}
+
+/* line 32, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.home-page-landing {
+  display: table;
+  width: 100%;
+  height: 105vh;
+  margin-top: -55px;
+  background-size: cover;
+  background-repeat: none;
+  background-image: url(/assets/startup-pitch-2-8ac3e37c9cd6c01187dcd23b4e1c572d.jpg);
+}
+
+/* line 42, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.landing-page-section,
+.landing-page-section.alt-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* line 47, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.landing-page-section p, .landing-page-section li,
+.landing-page-section.alt-section p,
+.landing-page-section.alt-section li {
+  font-size: 16px;
+}
+
+/* line 52, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.alt-section {
+  background-color: #f7f7f7;
+}
+
+/* line 56, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.icon-wrapper {
+  width: 75px;
+  height: 75px;
+}
+
+/* line 61, /Users/paulgonzalez/workspace/saucepan_app/app/assets/stylesheets/static_pages.scss.erb */
+.landing-icon {
+  background-color: #37BA91;
+  padding: 30px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #f7f7f7;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

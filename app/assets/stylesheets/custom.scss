@@ -68,24 +68,12 @@ a {
   border-radius: 0;
 }
 
-#error_explanation {
-  font-size: 14px;
-  border-radius: 4px;
-  padding: 10px;
-  border: 2px solid #D9534E;
-
-  .error-list-group > li {
-
-  }
-}
-
 .btn-custom,
 .btn-custom:hover {
-  background-color: #37BA91;
-  color: white;
+  background-color: #37BA91 !important;
+  color: white !important;
   font-weight: 600;
 }
-
 
 footer .row {
   padding: 25px 50px;
@@ -98,7 +86,15 @@ footer .row {
 
 .panel-custom {
   .panel-heading {
-    background-color: #37BA91;
-    color: white;
+    background-color: #37BA91 !important;
+    color: white !important;
   }
 }
+
+#error_explanation {
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid #D9534E;
+}
+
