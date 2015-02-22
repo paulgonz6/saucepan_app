@@ -1,13 +1,77 @@
+<div class="home-page-landing">
+  <div class="content landing-page-action">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h3 class="no-margin header-text">
+        Saucepan is the easiest way to get feedback from your
+        <span id="word1">audience</span>
+      </h3>
+      <hr/>
+      <%= link_to '<i class="fa fa-twitter"></i> Get started for free'.html_safe, signin_path, :class => "btn btn-default" %>
+      <br>
+      <br>
+      <p class="header-subtext lead">
+        Our basic package allows you to start getting feedback for free right away. See below for more information on pricing.
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
-    <div class="content-display">
-      <div class="content header-text landing-page-action">
-        <div class="col-xs-10 col-xs-offset-1">
-          <h4 class="no-margin">Start getting feedback from your audience today</h4>
-          <hr/>
-          <%= link_to '<i class="fa fa-twitter"></i> Login with Twitter'.html_safe, signin_path, :class => "btn btn-primary" %>
-        </div>
+    <div class="col-xs-12 col-md-8 col-md-offset-2 landing-page-section">
+      <div class="text-center">
+        <i class="fa fa-pencil landing-icon"></i>
+        <h4>Create a prompt</h4>
+        <p class="text-justify">
+          As much as you may like it, most people do not give unsolicited feedback. You need to ask for it. Saucepan is the simplest tool to help you create a well crafted prompt before your presentation starts.
+        </p>
+      </div>
+      <hr/>
+      <div class="text-center">
+        <i class="fa fa-users landing-icon"></i>
+        <h4>Share it with your audience</h4>
+        <p class="text-left">
+          Soliciting feedback has never been easier. No more confusing bit.ly URLs that your audience needs to remember, or emailing out surveys after the presentation. The audience can simply go to www.saucepan.io/(your Twitter handle) to answer your prompt.
+        </p>
+      </div>
+      <hr/>
+      <div class="text-center">
+        <i class="fa fa-comments-o landing-icon"></i>
+        <h4>Review your feedback</h4>
+        <p class="text-justify">
+          As your audience provides you feedback, you will see it appear directly on your profile page. We can lead a horse to water, but we can't make it drink. We've created the easiest way for you to hear what your audience is thinking. It is now up to you to turn that feedback into something special. We'll help you along the way of course.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="landing-page-section col-md-8 col-md-offset-2 alt-section text-center col-xs-12">
+      <div>
+        <h4><small>But there is a lot I can't do with Saucepan...</small></h4>
+        <h4>We know, and we like it that way</h4>
+        <hr/>
+        <p class="text-justify">
+          We believe in simplicity. The less friction there is in the feedback process, the more likely you are to improve. We want to make it as easy as possible for you to ask for feedback, and for people to give you feedback. Here are some things you can't do with Saucepan. You're welcome.
+        </p>
+        <ul class="list-group text-left">
+          <li class="list-group-item">Create long surveys</li>
+          <li class="list-group-item">Create different styles of questions</li>
+          <li class="list-group-item">Ask more than one question</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="landing-page-section col-md-8 col-md-offset-2 text-center col-xs-12">
+      <div>
+        <h4>What does this cost me?</h4>
+        <h4><small>Nothing to start</small></h4>
+        <hr/>
+        <%= render 'static_pages/pricing_picker' %>
       </div>
     </div>
   </div>
 </div>
+
